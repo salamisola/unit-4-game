@@ -1,7 +1,16 @@
 body{
-	/*background-image: url("assets/images/crystal-backgrd.jpg");*/
+	background-image: url("assets/images/crystal-backgrd.jpg");
 }
 .backgrd {
 	margin-top: 200px;
 	background-repeat: no-repeat;
-	width: 1000px;
+    width: 1000px;
+    
+}
+.crystalClass{
+	display: flex;
+	justify-content: space-around;
+	/*border: 1px solid red;*/
+	align-items: center;
+	margin-left: 120px
+}

@@ -26,17 +26,28 @@ var win=0;
 	
 	/*loop four times  and generate a random number each time the loop runs*/	
 	for(var i=0; i<4; i++){
-		 var randNum =  Math.floor((Math.random() * 12) + 1);
-         console.log(randNum); 	 
-         /*Generate four crystalClass inside a div with id=crystalClass and inner div with class="crystal"*/
-		 var crystal = $("<div>");
-		 crystal.attr({
-		 "class":  'crystal',
-		 "data-randum": randNum
-         });
-         /*Generate four crystalClass inside a div with id=crystalClass and inner div with class="crystal"*/
-		 var crystal = $("<div>");
-		 crystal.attr({
-		 "class":  'crystal',
-		 "data-randum": randNum
-		 });
+        var randNum =  Math.floor((Math.random() * 12) + 1);
+        console.log(randNum); 	 
+       
+        
+        /*Generate four crystalClass inside a div with id=crystalClass and inner div with class="crystal"*/
+        var crystal = $("<div>");
+        crystal.attr({
+        "class":  'crystal',
+        "data-randum": randNum
+        });
+       crystal.css({
+            "background-image":"url('" + images[i] + "')",
+            "background-size":"cover",
+            "background-color":"white"
+        });
+        /* displays the number on each crystal*/
+        /*crystal.html(randNum);*/
+        $(".crystalClass").append(crystal);
+   }
+   /*Displays the previous value*/
+   
+   $("#initialSelection").html("Total Selection: " + initialSelection);
+   /*$("#initialSelection").css("color":"white");*/
+}
+start();
