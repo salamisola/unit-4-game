@@ -6,7 +6,7 @@ var win=0;
  
  var start = function(){	
 	/*Line 8 will apply background image to the page*/
-   $(".backgrd").css("background-image", "url('C:/xampp/htdocs/sola/unit-4-game/assets/images/backgrd7.jpg')");
+   $(".backgrd").css("background-image", "url('assets/images/backgrd7.jpg')");
    
 	/*clear the crystal values before starting another game*/
 	$(".crystalClass").empty();
@@ -17,4 +17,26 @@ var win=0;
 				'assets/images/crystal2.jpg',
 				'assets/images/crystal5.png',
 				'assets/images/crystal8.png'
-				];
+                ];
+                /*Generate random number between 19 and 120*/
+	randomNumber =  Math.floor((Math.random() * 120) + 19);
+	console.log(randomNumber);
+	/*Display random number*/
+	$("#result").html('Random Result: ' + randomNumber);
+	
+	/*loop four times  and generate a random number each time the loop runs*/	
+	for(var i=0; i<4; i++){
+		 var randNum =  Math.floor((Math.random() * 12) + 1);
+         console.log(randNum); 	 
+         /*Generate four crystalClass inside a div with id=crystalClass and inner div with class="crystal"*/
+		 var crystal = $("<div>");
+		 crystal.attr({
+		 "class":  'crystal',
+		 "data-randum": randNum
+         });
+         /*Generate four crystalClass inside a div with id=crystalClass and inner div with class="crystal"*/
+		 var crystal = $("<div>");
+		 crystal.attr({
+		 "class":  'crystal',
+		 "data-randum": randNum
+		 });
