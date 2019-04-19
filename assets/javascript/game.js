@@ -51,10 +51,3 @@ var win=0;
    /*$("#initialSelection").css("color":"white");*/
 }
 start();
-
-/*.crystal is a button and can not listen to new element once the page reloads so instead we use document*/
- /*$(".crystal").on('click', function(){*/
- /*document is use to listen to the actual DOM, then pass the element that will be reloaded. In this case the crystalClass div*/
- $(document).on('click', ".crystal", function(){
-    var num = parseInt(($(this).attr('data-randum')));
-    initialSelection += num;
